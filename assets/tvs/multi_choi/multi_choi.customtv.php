@@ -11,7 +11,7 @@ MULTI CHOICE TV
  */
 $sql = 'SELECT DISTINCT `value` FROM '.$modx->getFullTableName('site_tmplvar_contentvalues').' WHERE tmplvarid = '.$field_id.' ORDER BY value ASC';
 $result = $modx->db->query( $sql );  
-$output = '<div id="out_'.$field_id.'">';
+$output = '<div id="out_'.$field_id.'" name="tv'.$field_id.'">';
 $ii = 0;
 while( $row = $modx->db->getRow( $result ) ) {      
     foreach(explode('||',$row['value']) as $kk){
